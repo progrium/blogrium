@@ -1,0 +1,47 @@
+	<div id="post-178" class="post-178 post type-post status-publish format-standard hentry entry entry-1">
+		<div class="entrytitle">
+			<h2>
+									<a
+                    href="{{ page.url }}"
+                    rel="bookmark" title="{{ page.title }}">{{ page.title }}</a>
+							</h2>
+			<h3>{{ page.date | date_to_long_string }}</h3>
+		</div>
+    <div class="entrybody">
+       {{ content }}
+    </div>
+
+		<div class="entrymeta">
+		<div class="postinfo">
+      <div class="postedby">Posted by {{ site.author.name }}</div>
+      <div class="filedto">Tagged:
+      {% for tag in page.tags %} 
+    	  <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">
+          {{ tag }}</a>{% if forloop.last %}{% else %},{% endif %}
+      {% endfor %}
+      </div>
+		</div>
+  </div>
+
+	</div>
+  <div class="commentsblock">
+     {% include JB/comments %}
+
+			</div>
+					<div class="navigation">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+      &nbsp;
+
+</div>
