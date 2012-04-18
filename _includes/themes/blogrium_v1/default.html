@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{% if page.title %}{{ page.title }} :: {% endif %}blogrium</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+ <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://s2.wp.com/wp-content/themes/pub/emire/style.css?m=1352691612g" type="text/css" media="screen" />
+
+<link rel="alternate" type="application/rss+xml" title="blogrium &raquo; Feed" href="http://blogrium.wordpress.com/feed/" />
+<link rel="stylesheet" href="http://s0.wp.com/wp-content/themes/h4/global.css?m=1352408494g" type="text/css" />
+<script type='text/javascript' src='http://s0.wp.com/wp-includes/js/jquery/jquery.js?m=1333391137g&#038;ver=1.7.2'></script>
+<meta property="og:type" content="blog" />
+<meta property="og:title" content="blogrium" />
+<meta property="og:url" content="http://blogrium.wordpress.com" />
+<meta property="og:description" content="progrium has a blogrium" />
+<meta property="og:site_name" content="blogrium" />
+<meta property="og:image" content="http://0.gravatar.com/blavatar/4150fae87d69f6e65037eecf2c4cf4cb?s=300" />
+<link rel="shortcut icon" type="image/x-icon" href="http://0.gravatar.com/blavatar/6d204ce7d704131797df501281dd975f?s=16" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="http://0.gravatar.com/blavatar/6d204ce7d704131797df501281dd975f?s=16" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="http://0.gravatar.com/blavatar/4150fae87d69f6e65037eecf2c4cf4cb?s=114" />
+<style type="text/css">
+  #header h1 { width: 945px; }
+  #header p { width: 945px; }
+  #wrap { width: 945px; }
+  #content { width: 700px; }
+  #navwrap { width: 945px; }
+  .entrytitle { padding-left: 0px !important; background: none !important; }
+  .entrytitle { border-bottom: 1px solid #5F666A !important; }
+  .navigation { height: 20px; }
+  .navigation ul { list-style: none; font-size: larger; }
+  .navigation li { float: left; margin-top: -10px; margin-left: 70px; margin-right: 70px; }
+  pre { padding-left: 30px; }
+  body { font-family: 'Droid Sans' !important; }
+  h1, h2, h3 { font-family: 'Droid Serif' !important; }
+</style>
+</head>
+<body id="home" class="home blog highlander-enabled highlander-dark">
+<div id="header">
+  <h1><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
+	<p class="description">progrium has a blogrium</p>
+</div>
+<div id="nav">
+	<div id="navwrap">
+			<ul>
+        <li><a href="{{ HOME_PATH }}">Home</a></li>
+        
+		<li class="page_item page-item-2"><a href="/about.html">About</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="wrap">
+  <div id="content">
+    {{ content }}
+
+								
+
+	
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="text-2" class="widget widget_text">			<div class="textwidget"><h2><a href="http://feeds2.feedburner.com/blogrium"><img src="http://faq.files.wordpress.com/2006/10/128px-feed-iconsvg.png" style="border:0;width:32px;height:32px;vertical-align:middle;padding-right:8px;margin-top:-2px;" /> Subscribe to Blog</a></h2></div>
+		</li>
+		<li id="top-posts" class="widget widget_stats_topposts">			<h2 class="widgettitle">Top Posts</h2>
+    <ul>
+      {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>		</li>
+</ul>
+</div>
+
+
+</div>
+{% include JB/analytics %}
+
+</body>
+</html>
