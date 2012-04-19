@@ -8,7 +8,7 @@ layout: default
 		<div class="entrytitle">
 			<h2>
 									<a
-                    href="{{ post.url }}"
+                    href="{{ BASE_PATH }}{{ post.url }}"
                     rel="bookmark" title="{{ post.title }}">{{ post.title }}</a>
                 </h2>
       <h3>{{ post.date | date_to_long_string }}</h3>
@@ -27,7 +27,7 @@ layout: default
       </div>
     </div>
     <a
-      href="{{ post.url }}#disqus_thread"
+      href="{{ BASE_PATH }}{{ post.url }}#disqus_thread"
       class="commentslink"  title="View Comments">View Comments &#187;</a>
   </div>
      </div>
@@ -36,7 +36,7 @@ layout: default
   <h2>Previous Posts</h2>
   <ul>
   {% else %}
-  <li><h4><a href="{{ post.url }}">{{ post.title }}</a></h4></li>
+  <li><h4><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4></li>
   {% endif %}
   {% endfor %}
   </ul>
